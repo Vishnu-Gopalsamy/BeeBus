@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Internet Permission for API calls -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_beebus"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_beebus"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BusBooking"
+        android:usesCleartextTraffic="true">
+
+        <!-- Splash Activity - Launcher -->
+        <activity
+            android:name="com.busbooking.app.activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BusBooking.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Authentication Activities -->
+        <activity
+            android:name="com.busbooking.app.activities.LoginActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.SplashActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.RegisterActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.LoginActivity" />
+
+        <!-- Main App Activities -->
+        <activity
+            android:name="com.busbooking.app.activities.HomeActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.LoginActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.SearchActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.HomeActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.SearchResultsActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.SearchActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.BusDetailsActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.SearchResultsActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.SeatSelectionActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.BusDetailsActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.PassengerDetailsActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.SeatSelectionActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.PaymentActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.PassengerDetailsActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.BookingConfirmationActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.PaymentActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.TicketActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.BookingConfirmationActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.ProfileActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.HomeActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.BookingHistoryActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.ProfileActivity" />
+
+        <!-- Admin Activities -->
+        <activity
+            android:name="com.busbooking.app.activities.AdminDashboardActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.HomeActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.AddBusActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.AdminDashboardActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.AddRouteActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.AdminDashboardActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.AddScheduleActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.AdminDashboardActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.AdminBookingsActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.AdminDashboardActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.ManageBusesActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.AdminDashboardActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.ManageRoutesActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.AdminDashboardActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.ManageSchedulesActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.AdminDashboardActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.EditBusActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.ManageBusesActivity" />
+
+        <!-- Owner Activities -->
+        <activity
+            android:name="com.busbooking.app.activities.OwnerDashboardActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.LoginActivity" />
+
+        <activity
+            android:name="com.busbooking.app.activities.OwnerBookingsActivity"
+            android:exported="false"
+            android:parentActivityName="com.busbooking.app.activities.OwnerDashboardActivity" />
+
+        <!-- Keep original MainActivity for backward compatibility -->
+
+    </application>
+
+</manifest>

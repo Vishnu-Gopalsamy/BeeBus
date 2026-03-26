@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="56dp"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/tv_seat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:text="1"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/textPrimary"
+        android:background="@drawable/seat_available"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless" />
+
+</FrameLayout>

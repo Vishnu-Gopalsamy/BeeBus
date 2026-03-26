@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/backgroundColor"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/checkbox_on_background"
+        app:tint="@color/successGreen"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking Confirmed!"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/textPrimary"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_booking_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking ID: B12345678"
+        android:textSize="16sp"
+        android:textColor="@color/textSecondary"
+        android:layout_marginBottom="32dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_conf_bus_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus Name"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/textPrimary" />
+
+            <TextView
+                android:id="@+id/tv_conf_route"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chennai to Coimbatore"
+                android:textColor="@color/textSecondary"
+                android:layout_marginTop="4dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerColor"
+                android:layout_marginVertical="16dp" />
+
+            <TextView
+                android:id="@+id/tv_conf_passengers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passengers: 2"
+                android:textColor="@color/textPrimary" />
+
+            <TextView
+                android:id="@+id/tv_conf_seats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seats: 12, 13"
+                android:textColor="@color/textPrimary"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_view_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="View Ticket"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/textWhite"
+        app:cornerRadius="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_go_home"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Go to Home"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="@color/borderColor"
+        android:textColor="@color/textPrimary"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>
